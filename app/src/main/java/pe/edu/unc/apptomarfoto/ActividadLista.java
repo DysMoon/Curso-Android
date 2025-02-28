@@ -11,7 +11,8 @@ import android.widget.Toast;
 
 
 public class ActividadLista extends ListActivity {
-    String[] ejer = {"TomarFoto","Juego","Sonidos"};
+
+    String[] ejer = {"TomarFoto","Juego","Sonido"};
 
 
     @Override
