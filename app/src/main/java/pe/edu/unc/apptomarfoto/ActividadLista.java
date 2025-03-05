@@ -12,7 +12,8 @@ import android.widget.Toast;
 
 public class ActividadLista extends ListActivity {
 
-    String[] ejer = {"TomarFoto","Juego","Sonido"};
+    //IMPORTANTE --> Sino no se va a poder ejecutar es el mismo nombre que de layout
+    String[] ejer = {"TomarFoto","Juego","Sonido","Ciclos","Contador","Validacion"};
 
 
     @Override
@@ -36,9 +37,6 @@ public class ActividadLista extends ListActivity {
             Log.d("Error", e.getMessage());
 
         }
-
-
-
 
 
     }
