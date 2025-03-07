@@ -29,19 +29,16 @@ public class ActividadTomarFoto extends AppCompatActivity {
     }
 
     public void tomarFoto(View boton){
-        //Declarar un ibjeto intenti de tipo generico
         Intent oIntento = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        //Iniciar la actividad
         startActivityIfNeeded(oIntento, 100) ;
 
     }
 
-    //Sobre escribir un metodo ppara capturar la imagen
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent oIntento) {
         super.onActivityResult(requestCode, resultCode, oIntento);
-        if(requestCode == 100)//Si el servicio esta funcionando
+        if(requestCode == 100)
         { if(resultCode == RESULT_OK){
             Bitmap oImagen = (Bitmap) oIntento.getExtras().get("data");
             ImageView foto = findViewById(R.id.imageView);

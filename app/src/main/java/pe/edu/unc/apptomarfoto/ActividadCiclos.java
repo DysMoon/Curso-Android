@@ -26,13 +26,12 @@ public class ActividadCiclos extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.ly_ciclos); //puede ser reemplazado por API
+        setContentView(R.layout.ly_ciclos);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        // Inicialización correcta del TextView
         lbEstado = findViewById(R.id.lbEstado);
         lvListaEstados = findViewById(R.id.lvListaEstados);
 
@@ -45,7 +44,6 @@ public class ActividadCiclos extends AppCompatActivity {
         lbEstado.setText(estado);
         Log.d("Estado", estado);
         lista.add(estado);
-        //la variable de tipo lista se va presentar en el ListView
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, lista);
         lvListaEstados.setAdapter(adapter);
     }

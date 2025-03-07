@@ -19,7 +19,7 @@ import java.util.Locale;
 
 public class ActividadSonido extends AppCompatActivity {
 
-    private TextView txtMultiple; // TextView donde se mostrará el resultado
+    private TextView txtMultiple;
 
 
     @Override
@@ -29,7 +29,7 @@ public class ActividadSonido extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.ly_sonido);
 
-        txtMultiple = findViewById(R.id.txtMultiple); // Asegurar que el ID es correcto
+        txtMultiple = findViewById(R.id.txtMultiple);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -52,9 +52,8 @@ public class ActividadSonido extends AppCompatActivity {
 
         if (requestCode == 200 && resultCode == RESULT_OK && data != null) {
             ArrayList<String> resultados = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-            String textoReconocido = resultados.get(0); // Primer resultado de voz a texto
+            String textoReconocido = resultados.get(0);
 
-            // Aquí puedes mostrar el resultado en un TextView o hacer algo con el texto
             Toast.makeText(this, "Reconocido: " + textoReconocido, Toast.LENGTH_LONG).show();
             txtMultiple.setText(textoReconocido);
         }

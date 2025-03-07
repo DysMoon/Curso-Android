@@ -13,7 +13,7 @@ import android.widget.Toast;
 public class ActividadLista extends ListActivity {
 
     //IMPORTANTE --> Sino no se va a poder ejecutar es el mismo nombre que de layout
-    String[] ejer = {"TomarFoto","Juego","Sonido","Ciclos","Contador","Validacion"};
+    String[] ejer = {"TomarFoto","Juego","Sonido","Ciclos","Contador","Validacion","Personas"};
 
 
     @Override
